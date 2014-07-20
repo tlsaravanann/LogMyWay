@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LogMyWay</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- User Defined Strings -->
+    
+    <string name="lblUsername">Username</string>
+    <string name="lblPassword">Password</string>
+    <string name="lblLogin">Login</string>
+    <string name="lblCancel">Cancel</string>
+    <string name="lblRememberMe">Remember Me</string>
+    <string name="lblChangePassword">Change Password</string>
+    <string name="lblRetypePassword">Retype Password</string>
+    <string name="lblSubmit">Submit</string>
+    
+    <!-- Messages -->
+    <string name="msg_LoginFailed">Invalid Username or Password!</string>
+    <string name="msg_UsernameEmpty">Please Enter the Username!</string>
+    <string name="msg_PasswordEmpty">Please Enter the Password!</string>
+    <string name="msg_ChangePasswordEmpty">Please Enter the ChangePassword!</string>
+    <string name="msg_RetypePasswordEmpty">Please Enter the Retype Password!</string>
+    <string name="msg_PasswordMismatched">ChangePassword and Retype Password is mismatched!</string>
+    
+</resources>

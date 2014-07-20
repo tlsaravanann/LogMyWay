@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=UICHDBSS02\SQL2008DEV;Initial Catalog=MyPriorities_Test_new;uid=sa;pwd=$samsung123" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\Saravanan\\Sample\\VS2012\\MyPriorities\\MyPriorities\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-</parameters>

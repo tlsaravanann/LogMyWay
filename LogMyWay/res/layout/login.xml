@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+  <RelativeLayout 
+      	android:orientation="vertical" 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"   		  	
+  		android:background="@drawable/bg_logo">  		
+  		<LinearLayout
+  		    android:id="@+id/header"
+  		    android:layout_width="fill_parent"
+  		    android:layout_height="wrap_content"
+  		    android:paddingBottom="5dip"
+  		    android:paddingTop="100dip"
+  		    android:orientation="horizontal">
+  		</LinearLayout>		  		
+		<LinearLayout		    
+		    android:layout_width="match_parent"
+		    android:id="@+id/Control"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/header"
+		    android:orientation="vertical"
+		    android:padding="10dip" >
+
+		    <TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/lblUsername"
+		        android:textColor="#ffffff" />
+
+		    <EditText
+		        android:layout_width="fill_parent"
+		        android:layout_height="0dp"
+		        android:layout_marginBottom="20dip"
+		        android:layout_marginLeft="3dp"
+		        android:layout_marginRight="3dp"
+		        android:layout_marginTop="5dip"
+		        android:layout_weight="1"
+		        android:singleLine="true"
+		        android:inputType="text"
+		        android:background="@drawable/border"
+		        android:textColor="#DEB887"
+		        android:id="@+id/txtUsername"
+		        >						      
+		    </EditText>
+
+		    <TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/lblPassword"
+		        android:textColor="#ffffff" />
+
+		    <EditText
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dip"
+		        android:layout_marginLeft="3dp"
+		        android:layout_marginRight="3dp"
+		        android:layout_marginBottom="10dip"
+		        android:inputType="textPassword"
+		        android:singleLine="true"		        
+		        android:background="@drawable/border"
+		        android:textColor="#DEB887"
+		        android:id="@+id/txtPassword"
+		        />
+
+		    <CheckBox
+		        android:id="@+id/chkRememberMe"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:text="@string/lblRememberMe"
+		        android:textColor="#ffffff" />
+
+	    <RelativeLayout  		    
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"		    		    
+		    android:orientation="horizontal"
+		    android:padding="10dip"	
+		    android:gravity="center_horizontal"	     
+		    >
+
+		    <Button
+		        android:id="@+id/btnCancel"
+		        android:layout_width="107dp"
+		        android:layout_height="30dp"
+		        android:layout_centerVertical="true"
+		        android:layout_marginLeft="20dp"
+		        android:layout_toRightOf="@+id/btnLogin"
+		        android:background="@drawable/button_background"
+		        android:text="@string/lblCancel"
+		        android:textColor="#DAA520" />
+
+		    <Button
+		        android:id="@+id/btnLogin"
+		        android:layout_width="107dp"
+		        android:layout_height="30dp"
+		        android:layout_alignBaseline="@+id/btnCancel"
+		        android:layout_alignBottom="@+id/btnCancel"
+		        android:layout_alignParentLeft="true"
+		        android:background="@drawable/button_background"
+		        android:text="@string/lblLogin"
+		        android:textColor="#DAA520" />
+
+  				      		  		   
+  		</RelativeLayout>
+	</LinearLayout>
+			
+  </RelativeLayout>
+</ScrollView>
