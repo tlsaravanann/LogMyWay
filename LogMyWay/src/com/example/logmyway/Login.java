@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-public class Login extends LogMyWayActivity {
+public class Login extends Activity {
 
 	public static final String Pref_Name = "PrefData";    //unique identifier for our Preferences
 	private static final String Pref_Username = "username"; 

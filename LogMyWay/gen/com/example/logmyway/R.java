@@ -49,6 +49,7 @@ public final class R {
         public static final int footer=0x7f030001;
         public static final int header=0x7f030002;
         public static final int login=0x7f030003;
+        public static final int routelist=0x7f030004;
     }
     public static final class menu {
         public static final int menu=0x7f070000;

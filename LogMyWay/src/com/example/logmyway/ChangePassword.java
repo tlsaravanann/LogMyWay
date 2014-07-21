@@ -3,6 +3,7 @@ package com.example.logmyway;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -10,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class ChangePassword extends LogMyWayActivity {
+public class ChangePassword extends Activity {
 	
 	
 	@Override
@@ -47,7 +48,7 @@ public class ChangePassword extends LogMyWayActivity {
 	        		int IsExist = 1; //CheckLogIn(txtUsername.getText().toString(), txtPassword.getText().toString());
 		        	if(IsExist > 0)
 		        	{		        		
-		        		//CallIntent();		        					        	
+		        		CallIntent();		        	
 		        	}
 		        	else
 		  	   		{	  	   				 		        		
@@ -56,7 +57,6 @@ public class ChangePassword extends LogMyWayActivity {
 	        	}	        	       	    		       
 	        }
 	    });
-		
 	}
 
 	@Override
@@ -81,4 +81,8 @@ public class ChangePassword extends LogMyWayActivity {
         alertDialog.show();  	
 	}
 
+	private void CallIntent() {
+		Intent intent = new Intent(this, RouteList.class);
+		startActivity(intent);
+	}
 }
