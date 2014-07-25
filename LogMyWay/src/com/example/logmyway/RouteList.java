@@ -3,6 +3,7 @@ package com.example.logmyway;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,14 +24,15 @@ public class RouteList extends ListActivity {
 		setListAdapter(new ArrayAdapter<String>(this, R.layout.routelist, routes));
  
 		ListView listView = getListView();
-		listView.setTextFilterEnabled(true);
+		listView.setTextFilterEnabled(true);		
  
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 			    // When clicked, show a toast with the TextView text
 				String selectedRoute = "Your selected route is '"+ ((TextView) view).getText().toString() +"'";
-				ShowAlert(getString(R.string.app_name), selectedRoute);
+				CallIntent();
+				//ShowAlert(getString(R.string.app_name), selectedRoute);
 			    //Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
 			}
 		}); 
@@ -49,6 +51,13 @@ public class RouteList extends ListActivity {
         });
 
         alertDialog.show();  	
+	}
+	
+	private void CallIntent() {
+		Intent intent = new Intent(this, KidList.class);
+		startActivity(intent);
+
+
 	}
  
 }

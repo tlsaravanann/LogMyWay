@@ -21,38 +21,41 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int bg_logo=0x7f020000;
-        public static final int border=0x7f020001;
-        public static final int button_background=0x7f020002;
-        public static final int gradient_bg=0x7f020003;
-        public static final int gradient_bg_hover=0x7f020004;
-        public static final int gridcell_border=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int image_bg=0x7f020007;
-        public static final int image_border=0x7f020008;
-        public static final int kid1=0x7f020009;
-        public static final int list_selector=0x7f02000a;
-        public static final int login_failed=0x7f02000b;
-        public static final int logmyway=0x7f02000c;
-        public static final int logo_approve=0x7f02000d;
-        public static final int logo_pending=0x7f02000e;
+        public static final int arrow=0x7f020000;
+        public static final int bg_logo=0x7f020001;
+        public static final int border=0x7f020002;
+        public static final int button_background=0x7f020003;
+        public static final int gradient_bg=0x7f020004;
+        public static final int gradient_bg_hover=0x7f020005;
+        public static final int gridcell_border=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int image_bg=0x7f020008;
+        public static final int image_border=0x7f020009;
+        public static final int kid1=0x7f02000a;
+        public static final int list_selector=0x7f02000b;
+        public static final int login_failed=0x7f02000c;
+        public static final int logmyway=0x7f02000d;
+        public static final int logo_approve=0x7f02000e;
+        public static final int logo_pending=0x7f02000f;
     }
     public static final class id {
         public static final int Control=0x7f080001;
-        public static final int action_settings=0x7f08000e;
+        public static final int action_settings=0x7f080010;
         public static final int artist=0x7f080009;
-        public static final int btnCancel=0x7f08000d;
+        public static final int btnCancel=0x7f08000e;
         public static final int btnLogin=0x7f080004;
-        public static final int chkRememberMe=0x7f08000c;
+        public static final int chkRememberMe=0x7f08000d;
+        public static final int duration=0x7f08000a;
         public static final int footer=0x7f080005;
         public static final int header=0x7f080000;
-        public static final int kidimage=0x7f080007;
+        public static final int list=0x7f08000f;
+        public static final int list_image=0x7f080007;
         public static final int thumbnail=0x7f080006;
         public static final int title=0x7f080008;
         public static final int txtChangePassword=0x7f080002;
-        public static final int txtPassword=0x7f08000b;
+        public static final int txtPassword=0x7f08000c;
         public static final int txtRetypePassword=0x7f080003;
-        public static final int txtUsername=0x7f08000a;
+        public static final int txtUsername=0x7f08000b;
     }
     public static final class layout {
         public static final int changepassword=0x7f030000;
@@ -60,7 +63,8 @@ public final class R {
         public static final int header=0x7f030002;
         public static final int kidlist=0x7f030003;
         public static final int login=0x7f030004;
-        public static final int routelist=0x7f030005;
+        public static final int main=0x7f030005;
+        public static final int routelist=0x7f030006;
     }
     public static final class menu {
         public static final int menu=0x7f070000;
