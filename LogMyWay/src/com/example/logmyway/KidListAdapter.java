@@ -5,6 +5,9 @@ import java.util.HashMap;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +59,14 @@ public class KidListAdapter extends BaseAdapter {
         title.setText(song.get(KidList.KEY_TITLE));
         artist.setText(song.get(KidList.KEY_ARTIST));
         duration.setText(song.get(KidList.KEY_DURATION));
-        imageLoader.DisplayImage(song.get(KidList.KEY_THUMB_URL), thumb_image);
+        thumb_image.setImageBitmap(decodeBase64(song.get(KidList.KEY_THUMB_URL)));
+        //imageLoader.DisplayImage(song.get(KidList.KEY_THUMB_URL), thumb_image);
         return vi;
+    }
+    
+    public Bitmap decodeBase64(String input) 
+    {
+        byte[] decodedByte = Base64.decode(input, 0);
+        return BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length); 
     }
 }

@@ -13,15 +13,19 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
+@SuppressWarnings("unused")
 public class KidList extends Activity {
 	
 	LogMyWayActivity baseActivity;
@@ -43,13 +47,46 @@ public class KidList extends Activity {
 	
 	ListView list;
     KidListAdapter adapter;
-
+    
+    
 	@SuppressLint("NewApi")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+
 		
+		  TextView switchStatus = (TextView) findViewById(R.id.duration);
+		  Switch mySwitch = (Switch)findViewById(R.id.switch1);
+		 
+		  //set the switch to ON 
+		  //mySwitch.setChecked(true);
+		  //attach a listener to check for changes in state
+		  
+		  /*
+		  mySwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			  
+			   @Override
+			   public void onCheckedChanged(CompoundButton buttonView,
+			     boolean isChecked) {
+			 
+			    if(isChecked){
+			     switchStatus.setText("Available");
+			    }else{
+			     switchStatus.setText("Not Available");
+			    }
+			 
+			   }
+			  }); 
+		  
+		  */
+		//check the current state before we display the screen
+		  if(mySwitch.isChecked()){
+		   switchStatus.setText("Available");
+		  }
+		  else {
+		   switchStatus.setText("Not Available");
+		  }
 		
 		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
