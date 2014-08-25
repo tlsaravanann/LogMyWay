@@ -19,6 +19,7 @@ public class ChangePassword extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.changepassword);
 		
+		final EditText txtCurrentPassword =(EditText)findViewById(R.id.txtCurrentPassword);
 		final EditText txtChangePassword =(EditText)findViewById(R.id.txtChangePassword);
 		final EditText txtRetypePassword =(EditText)findViewById(R.id.txtRetypePassword);
 		
@@ -28,10 +29,15 @@ public class ChangePassword extends Activity {
 	        @Override
 	        public void onClick(View v) 
 	        {
+	        	String sCurrentPassword = txtCurrentPassword.getText().toString().trim();
 	        	String sChangePassword = txtChangePassword.getText().toString().trim();
 	        	String sRetypePassword = txtRetypePassword.getText().toString().trim();
 	        	
-	        	if(sChangePassword.equals(""))
+	        	if(sCurrentPassword.equals(""))
+	        	{
+	        		ShowAlert(getString(R.string.app_name), getString(R.string.msg_CurrentPasswordEmpty));   	
+	        	}
+	        	else if(sChangePassword.equals(""))
 	        	{
 	        		ShowAlert(getString(R.string.app_name), getString(R.string.msg_ChangePasswordEmpty));   	
 	        	}

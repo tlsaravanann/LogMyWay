@@ -1,0 +1,23 @@
+<student>
+<list>
+<id>1</id>
+<name>Someone Like You</name>
+<stop>Adele</stop>
+<area>4:47</area>
+<photo>http://api.androidhive.info/student/images/adele.png</photo>
+</list>
+<list>
+<id>2</id>
+<name>Space Bound</name>
+<stop>Eminem</stop>
+<area>4:38</area>
+<photo>http://api.androidhive.info/student/images/eminem.png</photo>
+</list>
+<list>
+<id>3</id>
+<name>Stranger In Moscow</name>
+<stop>Michael Jackson</stop>
+<area>5:44</area>
+<photo>http://api.androidhive.info/student/images/mj.png</photo>
+</list>
+</student>

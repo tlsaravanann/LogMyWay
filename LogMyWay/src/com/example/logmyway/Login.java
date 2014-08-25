@@ -7,13 +7,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-public class Login extends Activity {
+public class Login extends Activity  {
 
 	public static final String Pref_Name = "PrefData";    //unique identifier for our Preferences
 	private static final String Pref_Username = "username"; 
@@ -96,13 +97,41 @@ public class Login extends Activity {
 	        }
 	    });
 		
-	}
-
+	}	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu, menu);
+		
+		for (int i = 0; i < menu.size(); i++) {
+			if (menu.getItem(i).getItemId() == R.id.menu_logout) {
+				menu.getItem(i).setVisible(false);
+			}
+			else if (menu.getItem(i).getItemId() == R.id.menu_ChangePassword) {
+				menu.getItem(i).setVisible(false);
+			}
+		}
+		
 		return true;
+	}
+	
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {		
+				
+		int itemId = item.getItemId();		
+		
+		switch (itemId) {		
+		case R.id.menu_Exit:
+			CallApplicationExit();
+			break;
+		}
+		return true;
+	}
+	
+	@Override
+	public void onBackPressed() {		
+		CallApplicationExit();
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -121,10 +150,17 @@ public class Login extends Activity {
 	}
 	
 	private void CallIntent() {
-		Intent intent = new Intent(this, ChangePassword.class);
+		Intent intent = new Intent(this, RouteList.class);
 		startActivity(intent);
 
 
+	}
+	
+	private void CallApplicationExit() {
+		Intent intentExit = new Intent(this, LogMyWayActivity.class);
+		intentExit.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+		intentExit.putExtra("EXIT", true);
+		this.startActivity(intentExit);
 	}
 
 }

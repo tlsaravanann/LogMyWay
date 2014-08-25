@@ -12,16 +12,21 @@
     <string name="lblLogin">Login</string>
     <string name="lblCancel">Cancel</string>
     <string name="lblRememberMe">Remember Me</string>
+    <string name="lblCurrentPassword">Current Password</string>
     <string name="lblChangePassword">Change Password</string>
     <string name="lblRetypePassword">Retype Password</string>
     <string name="lblSubmit">Submit</string>
+    <string name="lblLogout">Logout</string>
+    <string name="lblExit">Exit</string>
     
     <!-- Messages -->
     <string name="msg_LoginFailed">Invalid Username or Password!</string>
     <string name="msg_UsernameEmpty">Please Enter the Username!</string>
     <string name="msg_PasswordEmpty">Please Enter the Password!</string>
-    <string name="msg_ChangePasswordEmpty">Please Enter the ChangePassword!</string>
-    <string name="msg_RetypePasswordEmpty">Please Enter the Retype Password!</string>
+    <string name="msg_CurrentPasswordEmpty">Please enter the Current Password!</string>
+    <string name="msg_ChangePasswordEmpty">Please enter the ChangePassword!</string>
+    <string name="msg_RetypePasswordEmpty">Please enter the Retype Password!</string>
+    <string name="msg_CurrPasswordFailed">Invalid Current Password!</string>
     <string name="msg_PasswordMismatched">ChangePassword and Retype Password is mismatched!</string>
     
 </resources>

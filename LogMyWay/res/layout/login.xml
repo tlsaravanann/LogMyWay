@@ -45,6 +45,7 @@
 		        android:background="@drawable/border"
 		        android:textColor="#DEB887"
 		        android:id="@+id/txtUsername"
+		        android:text="Test User"
 		        >						      
 		    </EditText>
 
@@ -66,6 +67,7 @@
 		        android:background="@drawable/border"
 		        android:textColor="#DEB887"
 		        android:id="@+id/txtPassword"
+		        android:text="password123"
 		        />
 
 		    <CheckBox

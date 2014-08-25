@@ -1,25 +1,31 @@
 package com.example.logmyway;
 
-import android.app.AlertDialog;
+import android.annotation.SuppressLint;
 import android.app.ListActivity;
-import android.content.DialogInterface;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.view.MenuItem;
+
  
 public class RouteList extends ListActivity {
  
 	static final String[] routes = new String[] { "Route A", "Route B", "Route C", "Route D", "Route E" };
+	
+	LogMyWayActivity baseActivity;
+	RouteList selfActivity;
  
+	@SuppressLint("NewApi")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);	
-		//setContentView(R.layout.routelist);
+		//setContentView(R.layout.routelist);		
  
 		setListAdapter(new ArrayAdapter<String>(this, R.layout.routelist, routes));
  
@@ -30,34 +36,51 @@ public class RouteList extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 			    // When clicked, show a toast with the TextView text
-				String selectedRoute = "Your selected route is '"+ ((TextView) view).getText().toString() +"'";
-				CallIntent();
+				//String selectedRoute = "Your selected route is '"+ ((TextView) view).getText().toString() +"'";
+				callKidList();
 				//ShowAlert(getString(R.string.app_name), selectedRoute);
 			    //Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
 			}
 		}); 
 	}
 	
-	@SuppressWarnings("deprecation")
-	private void ShowAlert(String Title, String Message)
-	{
-		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle(Title);
-        alertDialog.setMessage(Message);
-        //alertDialog.setIcon(R.drawable.login_failed);
-        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {	                 
-                }
-        });
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.menu, menu);
+		return true;
+	}
 
-        alertDialog.show();  	
+	@Override
+	public void onBackPressed() {		
 	}
 	
-	private void CallIntent() {
-		Intent intent = new Intent(this, KidList.class);
-		startActivity(intent);
-
-
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		Intent intent;
+		switch (item.getItemId()) {		
+		case R.id.menu_ChangePassword:
+			intent = new Intent(this, ChangePassword.class);
+			startActivity(intent);			
+			break;
+		case R.id.menu_logout:
+			intent = new Intent(this, Login.class);
+			startActivity(intent);
+			break;
+		case R.id.menu_Exit:
+			intent = new Intent(this, LogMyWayActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+			intent.putExtra("EXIT", true);
+			this.startActivity(intent);
+			break;		
+		}
+		return true;
 	}
- 
+	
+	
+	public void callKidList() {
+		Intent intent = new Intent(this, KidList.class);		
+		startActivity(intent);
+	}
+		
 }
