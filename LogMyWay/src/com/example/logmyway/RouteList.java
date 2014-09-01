@@ -11,15 +11,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 import android.view.MenuItem;
 
  
 public class RouteList extends ListActivity {
  
 	static final String[] routes = new String[] { "Route A", "Route B", "Route C", "Route D", "Route E" };
-	
-	LogMyWayActivity baseActivity;
-	RouteList selfActivity;
+		
  
 	@SuppressLint("NewApi")
 	@Override
@@ -27,22 +26,42 @@ public class RouteList extends ListActivity {
 		super.onCreate(savedInstanceState);	
 		//setContentView(R.layout.routelist);		
  
-		setListAdapter(new ArrayAdapter<String>(this, R.layout.routelist, routes));
+		//setListAdapter(new ArrayAdapter<String>(this, R.layout.routelist, routes));
  
-		ListView listView = getListView();
-		listView.setTextFilterEnabled(true);		
- 
-		listView.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-			    // When clicked, show a toast with the TextView text
-				//String selectedRoute = "Your selected route is '"+ ((TextView) view).getText().toString() +"'";
-				callKidList();
-				//ShowAlert(getString(R.string.app_name), selectedRoute);
-			    //Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
-			}
-		}); 
+		//ListView listView = getListView();
+		//listView.setTextFilterEnabled(true);
+		
+				
+		  RouteListAdapter rla = new RouteListAdapter(this, routes);
+		  setListAdapter(rla);			
+		 
 	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+
+		  super.onListItemClick(l, v, position, id);
+
+		  // getting the value of clicked item
+		  String clicked_item = (String) getListAdapter().getItem(position);
+		  Toast.makeText(this, "You clicked : " + clicked_item,
+		    Toast.LENGTH_SHORT).show();
+		  
+		  callKidList();
+		  
+		 }
+	
+	/*
+	
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view,
+			int position, long id) {
+	    // When clicked, show a toast with the TextView text
+		//String selectedRoute = "Your selected route is '"+ ((TextView) view).getText().toString() +"'";
+		callKidList();
+		//ShowAlert(getString(R.string.app_name), selectedRoute);
+	    //Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+	}*/
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

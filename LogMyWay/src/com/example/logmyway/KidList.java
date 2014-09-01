@@ -79,7 +79,7 @@ public class KidList extends Activity {
 			   }
 			  }); 
 		  
-		  */
+		  
 		//check the current state before we display the screen
 		  if(mySwitch.isChecked()){
 		   switchStatus.setText("Available");
@@ -88,7 +88,7 @@ public class KidList extends Activity {
 		   switchStatus.setText("Not Available");
 		  }
 		
-		
+		*/
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
 

@@ -47,11 +47,12 @@ public final class R {
         public static final int duration=0x7f08000b;
         public static final int footer=0x7f080006;
         public static final int header=0x7f080000;
+        public static final int lblRouteName=0x7f080012;
         public static final int list=0x7f080011;
         public static final int list_image=0x7f080008;
-        public static final int menu_ChangePassword=0x7f080012;
-        public static final int menu_Exit=0x7f080014;
-        public static final int menu_logout=0x7f080013;
+        public static final int menu_ChangePassword=0x7f080013;
+        public static final int menu_Exit=0x7f080015;
+        public static final int menu_logout=0x7f080014;
         public static final int switch1=0x7f08000c;
         public static final int thumbnail=0x7f080007;
         public static final int title=0x7f080009;

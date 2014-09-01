@@ -3,10 +3,12 @@ package com.example.logmyway;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.R.color;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +48,11 @@ public class KidListAdapter extends BaseAdapter {
         View vi=convertView;
         if(convertView==null)
             vi = inflater.inflate(R.layout.kidlist, null);
+        
+        if(position % 2 == 1)
+        	vi.setBackgroundColor(Color.CYAN);
+        else
+        	vi.setBackgroundColor(Color.BLUE);
 
         TextView title = (TextView)vi.findViewById(R.id.title); // title
         TextView artist = (TextView)vi.findViewById(R.id.artist); // artist name
