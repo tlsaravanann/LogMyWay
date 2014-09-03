@@ -5,6 +5,10 @@
         android:title="@string/lblChangePassword"/>
     
     <item
+        android:id="@+id/menu_GPSTrack"                
+        android:title="@string/lblGPSTrack"/>
+    
+    <item
         android:id="@+id/menu_logout"                
         android:title="@string/lblLogout"/>
     

@@ -18,6 +18,7 @@
     <string name="lblSubmit">Submit</string>
     <string name="lblLogout">Logout</string>
     <string name="lblExit">Exit</string>
+    <string name="lblGPSTrack">Track My Vechicle</string>
     
     <!-- Messages -->
     <string name="msg_LoginFailed">Invalid Username or Password!</string>

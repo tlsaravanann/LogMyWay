@@ -146,7 +146,11 @@ public class KidList extends Activity {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			finish();
-			break;		
+			break;	
+		case R.id.menu_GPSTrack:
+			intent = new Intent(this, GPSActivity.class);
+			startActivity(intent);			
+			break;
 		case R.id.menu_ChangePassword:
 			intent = new Intent(this, ChangePassword.class);
 			startActivity(intent);			

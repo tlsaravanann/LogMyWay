@@ -77,7 +77,11 @@ public class RouteList extends ListActivity {
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		Intent intent;
-		switch (item.getItemId()) {		
+		switch (item.getItemId()) {
+		case R.id.menu_GPSTrack:
+			intent = new Intent(this, GPSActivity.class);
+			startActivity(intent);			
+			break;
 		case R.id.menu_ChangePassword:
 			intent = new Intent(this, ChangePassword.class);
 			startActivity(intent);			
